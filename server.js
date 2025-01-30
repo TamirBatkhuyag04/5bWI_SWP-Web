@@ -22,8 +22,8 @@ app.get("/people", (req, res) => {
 })
 
 app.get("/people/:id", (req, res) => {
-    console.log(req.params.id);
-    res.send(data);
+    const id = parseInt(req.params.id);
+    res.send(data[id]);
 })
 
 app.post("/people", (req, res) => {
